@@ -1,0 +1,26 @@
+apiVersion: spinnaker.armory.io/v1alpha2
+kind: SpinnakerService
+metadata:
+  name: spinnakercandy
+spec:
+  spinnakerConfig:  
+    config:
+      features:
+        artifacts: true
+      artifacts:
+        github:
+          enabled: true
+          accounts:
+         
+          - master:this is the master url
+
+          - username:chadtripod
+            
+            token:this is the token
+  
+
+
+
+
+
+

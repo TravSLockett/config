@@ -1,0 +1,231 @@
+<!--
+<nav class="navbar navbar-dark bg-dark mb-0">
+  <div class="container">
+    <a class="navbar-brand" href="/">Spinnaker</a>
+    <div class="navbar-expand mr-auto">
+      <div class="navbar-nav">
+        <a
+          class="nav-item nav-link"
+          [routerLink]="['/']"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Search</a
+        >
+        <a
+          class="nav-item nav-link"
+          [routerLink]="['/about']"
+          [routerLinkActive]="'active'"
+          >Project</a
+        >
+        <a
+          class="nav-item nav-link"
+          [routerLink]="['/contact']"
+          [routerLinkActive]="'active'"
+          >Application</a
+        >
+        <a
+          class="nav-item nav-link"
+          [routerLink]="['/login']"
+          [routerLinkActive]="'active'"
+          >Pipeline Templates</a
+        >
+      </div>
+      <form
+        class="form-inline d-flex justify-content-center md-form form-sm mt-0 mb-0"
+      >
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input
+          class="form-control form-control-sm ml-3 w-75"
+          type="text"
+          placeholder="Search for services"
+          aria-label="Search"
+        />
+      </form>
+    </div>
+  </div>
+</nav>
+-->
+
+<div class="topnav">
+  <a class="active" href="#home">Spinnaker</a>
+  <a href="#about">Search</a>
+  <a href="#contact">Project</a>
+  <a href="#about">Application</a>
+  <a href="#contact">Pipeline Templates</a>
+
+  <div class="search-container">
+    <form>
+      <input
+        class="searchBar"
+        type="text"
+        placeholder="Search.."
+        name="search"
+      />
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<!--
+<nav class="navbar is-dark mb-0">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      Spinnaker
+    </a>
+    <div
+      class="navbar-burger burger"
+      data-target="navbarExampleTransparentExample"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="#">
+        Home
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">
+          Services
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="#">
+            Github
+          </a>
+          <a class="navbar-item" href="#">
+            Kunbernates
+          </a>
+          <a class="navbar-item" href="#">
+            Jenkins
+          </a>
+          <a class="navbar-item" href="#">
+            Splunk
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <form
+          class="form-inline d-flex justify-content-center md-form form-sm mt-0 mb-0"
+        >
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input
+            class="form-control form-control-sm ml-3 w-75"
+            type="text"
+            placeholder="Search for services"
+            aria-label="Search"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+-->
+<!--
+<nav class="navbar is-dark mb-0">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item"> </a>
+      <span class="navbar-burger burger" data-target="navbar-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+    <div id="navbar-menu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" routerLink="/home">
+          Home
+        </a>
+        <a class="navbar-item" routerLink="/config">
+          Configuration
+        </a>
+        <a class="navbar-item">
+          Documentation
+        </a>
+        <span class="navbar-item">
+          <a class="button is-info is-inverted">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>Download</span>
+          </a>
+        </span>
+      </div>
+      <form class="form-inline md-form mr-auto mb-4">
+        <input
+          class="form-control mr-sm-2"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button
+          mdbBtn
+          size="sm"
+          gradient="aqua"
+          rounded="true"
+          class="my-0 waves-light"
+          mdbWavesEffect
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+-->
+<!--
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="#">Some Company</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarCollapse"
+    aria-controls="navbarCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/config">Configuration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">Create</a>
+      </li>
+    </ul>
+  </div>
+  <form class="form-inline md-form mr-auto mb-4">
+    <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon>
+    <input
+      class="form-control mr-sm-2"
+      type="text"
+      placeholder="Search"
+      aria-label="Search"
+    />
+    <button
+      mdbBtn
+      size="sm"
+      gradient="aqua"
+      rounded="true"
+      class="my-0 waves-light"
+      mdbWavesEffect
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+</nav>
+-->

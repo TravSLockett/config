@@ -1,0 +1,90 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="form-group">
+        <label for="id" style="color: aliceblue;">Master Host Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="id"
+          required
+          [(ngModel)]="model.id"
+          name="id"
+          placeholder="Please enter "
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name" style="color: aliceblue;">Service Acccount</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="model.name"
+          name="name"
+          placeholder="Please enter "
+        />
+      </div>
+      <div class="form-group">
+        <label for="config" style="color: aliceblue;">API Token</label>
+        <input
+          type="text"
+          class="form-control"
+          id="config"
+          required
+          [(ngModel)]="model.configuration"
+          name="config"
+          placeholder="Please enter "
+        />
+      </div>
+      <div class="two-buttons">
+        <button
+          type="button"
+          class="btn btn-secondary clear"
+          (click)="enable(); heroForm.reset()"
+        >
+          Clear
+        </button>
+        <button
+          type="submit"
+          class="btn btn-success enable"
+          [disabled]="!heroForm.form.valid"
+        >
+          Enable
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted" class="report">
+    <div class="report-box">
+      <div class="col col-xs-3">
+        <div class="row sub">Configured Master:</div>
+        <div class="col-xs-3 sub">{{ model.id }}</div>
+      </div>
+      <div class="col col-xs-3">
+        <div class="row sub">Last Communication:</div>
+        <div class="col-xs-3 sub">{{ model.name }}</div>
+      </div>
+      <div class="col col-xs-3">
+        <div class="row sub">Last Failue:</div>
+        <div class="col-xs-3 sub">{{ model.configuration }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<div class="form-group">
+  <label for="services">services</label>
+  <select
+    class="form-control"
+    id="power"
+    required
+    [(ngModel)]="model.configuration"
+    name="configuration"
+  >
+    <option *ngFor="let pow of services" [value]="pow">{{ pow }}</option>
+  </select>
+</div>
+-->

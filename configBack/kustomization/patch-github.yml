@@ -1,0 +1,15 @@
+apiVersion: spinnaker.armory.io/v1alpha2
+kind: SpinnakerService
+metadata:
+  name: spinnaker
+spec:
+  spinnakerConfig:  
+    config:
+      features:
+        artifacts: true
+      artifacts:
+        github:
+          enabled: true
+          accounts:
+          - name: chadtripod
+            token: 543256432543253252352

@@ -1,0 +1,19 @@
+<section class="hero body-second-inner-element">
+  <div class="hero-body">
+    <div class="logo">
+      <img class="btn btn-secondary mt-0 mb-0" [src]="whichPic()" />
+      <div>
+        <h1 style="color: aliceblue;">{{ message }}</h1>
+      </div>
+    </div>
+
+    <div class="box1">
+      <div class="form-box">
+        <button class="btn btn-md btn-secondary" (click)="goToPage()">
+          Home
+        </button>
+        <app-form></app-form>
+      </div>
+    </div>
+  </div>
+</section>

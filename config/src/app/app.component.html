@@ -1,0 +1,93 @@
+<div class="whole-thing">
+  <app-layout>
+    <div [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </app-layout>
+</div>
+
+<!--
+<div>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
+-->
+<!--
+<div fxLayout="column" fxFlexFill>
+  <app-header></app-header>
+  <div fxFlex><router-outlet></router-outlet></div>
+  <app-footer></app-footer>
+</div>
+-->
+<!--responsive-->
+<!--
+<div
+  fxLayout="row wrap"
+  fxLayout.lt-sm="column"
+  fxLayoutGap="32px"
+  fxLayoutAlign="flex-start"
+>
+  <ng-container *ngFor="let _ of [1, 2, 3, 4, 5, 6]">
+    <app-flex-test
+      fxFlex="0 1 calc(33.3% - 32px)"
+      fxFlex.lt-md="0 1 calc(50% - 32px)"
+      fxFlex.lt-sm="100%"
+    ></app-flex-test>
+  </ng-container>
+</div>
+-->
+<!--row based card list -->
+<!--
+<style>
+  .cardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  /* Column Gap */
+  .cardList > * {
+    box-sizing: border-box;
+  }
+  .cardList > *:not(:last-child) {
+    margin-right: 32px;
+  }
+  /* Item sizing */
+  .cardListItem {
+    flex: 0 1 calc(33.3% - 32px);
+  }
+</style>
+<div class="cardList">
+  <ng-container *ngFor="let _ of [1, 2, 3, 4, 5, 6]">
+    <app-flex-test class="cardListItem"></app-flex-test>
+  </ng-container>
+</div>
+-->
+
+<!--coloumn based card list -->
+<!-- 
+<div class="app-body" (window:resize)="onResize()">
+  <style>
+    .cardList {
+      display: flex;
+      flex-direction: column;
+    }
+    /* Row Gap */
+    .cardList > *:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  </style>
+  <div class="cardList">
+    <app-flex-test></app-flex-test>
+    <app-flex-test></app-flex-test>
+    <app-flex-test></app-flex-test>
+  </div>
+  </div>
+  -->
+
+<!--
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+  -->

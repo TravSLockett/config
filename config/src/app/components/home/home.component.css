@@ -1,0 +1,147 @@
+.hero {
+  padding-bottom: 9%;
+}
+
+.lower-row {
+  margin-top: 22%;
+}
+.upper-row {
+  margin-top: 0%;
+}
+.first-box {
+  margin-right: 25%;
+}
+.third-box {
+  margin-right: 25%;
+}
+
+.btn {
+  margin-right: 3%;
+  margin-top: 15%;
+  border-color: transparent;
+}
+.click {
+  background-color: transparent;
+}
+
+/*
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.column1 {
+  flex: 49%;
+  padding: 20px;
+  text-align: center;
+  height: 365px;
+  border-color: gainsboro;
+  border-width: 0px;
+  border-right-width: 0.5px;
+  border-bottom-width: 0.5px;
+  border-style: solid;
+}
+
+.column2 {
+  flex: 49%;
+  padding: 20px;
+  text-align: center;
+  height: 365px;
+  border-color: gainsboro;
+  border-width: 0px;
+  border-left-width: 0.5px;
+  border-bottom-width: 0.5px;
+  border-style: solid;
+}
+
+.column3 {
+  flex: 49%;
+  padding: 20px;
+  text-align: center;
+  height: 365px;
+  border-color: gainsboro;
+  border-width: 0px;
+  border-right-width: 0.5px;
+  border-top-width: 0.5px;
+  border-style: solid;
+}
+
+.column4 {
+  flex: 49%;
+  padding: 20px;
+  text-align: center;
+  height: 365px;
+  border-color: gainsboro;
+  border-width: 0px;
+  border-left-width: 0.5px;
+  border-top-width: 0.5px;
+  border-style: solid;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+*/
+
+/* dark theme css for 4 boxes*/
+
+#container {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.block1 {
+  border-radius: 30px;
+
+  width: 450px;
+  height: 250px;
+  margin: 10px;
+  display: inline-block;
+
+  background: #aaa;
+  opacity: 0.85;
+
+  vertical-align: top;
+}
+.block2 {
+  border-top-right-radius: 40px;
+  border-radius: 30px;
+  width: 450px;
+  height: 250px;
+  margin: 10px;
+  display: inline-block;
+  background: #aaa;
+  opacity: 0.85;
+  vertical-align: top;
+}
+.block3 {
+  border-bottom-left-radius: 40px;
+  border-radius: 30px;
+  width: 450px;
+  height: 250px;
+  margin: 10px;
+  display: inline-block;
+  background: #aaa;
+  opacity: 0.85;
+  vertical-align: top;
+}
+.block4 {
+  border-bottom-right-radius: 40px;
+  border-radius: 30px;
+  width: 450px;
+  height: 250px;
+  margin: 10px;
+  display: inline-block;
+  background: #aaa;
+  opacity: 0.85;
+  vertical-align: top;
+}

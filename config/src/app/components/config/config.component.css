@@ -1,0 +1,22 @@
+.hero {
+  opacity: 85%;
+  height: 93vh;
+}
+.form-box {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 0%;
+}
+.box1 {
+  margin-bottom: 0%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90vw;
+}
+.btn {
+  align-self: center;
+  margin-bottom: 25px;
+}
+.logo {
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+.two-buttons {
+  justify-content: space-between;
+}
+
+.enable {
+  float: right;
+}
+
+.clear {
+  float: left;
+}
+.sub {
+  color: white;
+}
+.report {
+  text-align: center;
+}
+.report-box {
+  align-self: center;
+  margin: 0 auto;
+  width: 80%;
+}
+.col {
+  margin: auto;
+}
