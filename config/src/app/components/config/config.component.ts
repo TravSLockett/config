@@ -10,6 +10,7 @@ export class ConfigComponent implements OnInit {
   constructor(private router: Router) {}
   data: any;
   message: string;
+
   ngOnInit(): void {
     this.data = history.state.data.buttonpressed;
     this.message = 'Configure New ' + this.data + ' Masters';

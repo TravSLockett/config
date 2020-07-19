@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const fs = require("fs");
-const readline = require("readline");
+
 //write to file
 /*
 fs.writeFile("helloworld.txt", "Hello World!", function (err) {
@@ -55,8 +55,14 @@ router.get("/", function (req, res, next) {
 });
 
 router.post("/enable", function (req, res, next) {
-  if (req.body.which === "jenkins") {
+  if (req.body.which === "Jenkins") {
     var file = "./kustomization/patch-jenkins.yml";
+  } else if (req.body.which === "Github") {
+    var file = "./kustomization/patch-github.yml";
+  } else if (req.body.which === "Kubernetes") {
+    var file = "./kustomization/patch-kubernetes-acct.yml";
+  } else if (req.body.which === "Dinghy") {
+    var file = "./kustomization/patch-dinghy.yml";
   }
   var allLines = fs.readFileSync(file).toString().split("\n");
   fs.writeFileSync(file, "", function () {
@@ -64,13 +70,13 @@ router.post("/enable", function (req, res, next) {
   });
   allLines.forEach(function (line) {
     if (line.includes("address")) {
-      var newLine = line + req.body.address;
+      var newLine = "address: " + req.body.address;
       fs.appendFileSync(file, newLine.toString() + "\n");
     } else if (line.includes("username")) {
-      var newLine = line + req.body.username;
+      var newLine = "username: " + req.body.username;
       fs.appendFileSync(file, newLine.toString() + "\n");
     } else if (line.includes("password")) {
-      var newLine = line + req.body.password;
+      var newLine = "password: " + req.body.password;
       fs.appendFileSync(file, newLine.toString() + "\n");
     } else {
       fs.appendFileSync(file, line.toString() + "\n");

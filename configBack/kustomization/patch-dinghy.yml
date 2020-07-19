@@ -7,8 +7,12 @@ spec:
     config:
       armory:
         dinghy:
-          enabled: true                  # Whether or not Dinghy is enabled
-          templateOrg: chadtripod            # SCM organization or namespace where application and template repositories are located
+          enabled: true # Whether or not Dinghy is enabled
+          templateOrg: chadtripod # SCM organization or namespace where application and template repositories are located
           templateRepo: dinghy # SCM repository where module templates are located
-          githubToken: 54325432543254325342               #  GitHub token. This field supports "encrypted" field references (https://docs.armory.io/spinnaker-install-admin-guides/secrets/)
+          githubToken: 54325432543254325342 #  GitHub token. This field supports "encrypted" field references (https://docs.armory.io/spinnaker-install-admin-guides/secrets/)
           githubEndpoint: https://api.github.com
+
+address:
+username:
+password:

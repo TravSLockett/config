@@ -50,6 +50,7 @@
           type="submit"
           class="btn btn-success enable"
           [disabled]="!heroForm.form.valid"
+          (click)="enableIt()"
         >
           Enable
         </button>

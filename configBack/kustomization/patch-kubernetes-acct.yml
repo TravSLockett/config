@@ -9,21 +9,23 @@ spec:
         kubernetes:
           enabled: true
           accounts:
-          - name: my-k8s-acct # Account name you want Spinnaker to use to identify the deployment target
-            requiredGroupMembership: []
-            providerVersion: V2
-            permissions: {}
-            dockerRegistries: []
-            configureImagePullSecrets: true
-            cacheThreads: 1
-            namespaces: [] # Change if you only want to deploy to specific namespaces
-            omitNamespaces: []
-            kinds: []
-            omitKinds: []
-            customResources: []
-            cachingPolicies: []
-            oAuthScopes: []
-            onlySpinnakerManaged: false
-            kubeconfigFile: secret
+            - name: my-k8s-acct # Account name you want Spinnaker to use to identify the deployment target
+              requiredGroupMembership: []
+              providerVersion: V2
+              permissions: {}
+              dockerRegistries: []
+              configureImagePullSecrets: true
+              cacheThreads: 1
+              namespaces: [] # Change if you only want to deploy to specific namespaces
+              omitNamespaces: []
+              kinds: []
+              omitKinds: []
+              customResources: []
+              cachingPolicies: []
+              oAuthScopes: []
+              onlySpinnakerManaged: false
+              kubeconfigFile: secret
           primaryAccount: my-k8s-acct
-    
+address:
+username:
+password:

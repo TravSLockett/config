@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { form } from '../../models/form';
+import { ApiServiceService } from '../../services/api-service.service';
 
 @Component({
   selector: 'app-form',
@@ -7,7 +8,8 @@ import { form } from '../../models/form';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
-  constructor() {}
+  @Input() which: string;
+  constructor(private _apiService: ApiServiceService) {}
 
   ngOnInit(): void {}
 
@@ -20,5 +22,13 @@ export class FormComponent implements OnInit {
   services = ['Github', 'Splunk', 'Jenkins', 'Kubernetes'];
   enable() {
     this.model = new form(10, '', '');
+  }
+  enableIt() {
+    this._apiService.enable(
+      this.which,
+      this.model.id,
+      this.model.name,
+      this.model.configuration
+    );
   }
 }

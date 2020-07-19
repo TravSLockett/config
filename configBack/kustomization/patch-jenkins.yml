@@ -10,6 +10,6 @@ spec:
           enabled: true
           masters:
             - name: my-master
-              address:
-              username:
-              password:
+address:
+username:
+password:

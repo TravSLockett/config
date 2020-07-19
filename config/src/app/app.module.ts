@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ApiServiceService } from './services/api-service.service';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,11 +23,12 @@ import { FormComponent } from './components/form/form.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     MDBBootstrapModule.forRoot(),
     FlexLayoutModule,
     LayoutModule,
   ],
-  providers: [],
+  providers: [ApiServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

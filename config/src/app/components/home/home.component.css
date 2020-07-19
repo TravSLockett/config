@@ -23,7 +23,6 @@
 .click {
   background-color: transparent;
 }
-
 /*
 * {
   box-sizing: border-box;
@@ -34,9 +33,9 @@
   flex-wrap: wrap;
 }
 
-
 .column1 {
   flex: 49%;
+
   padding: 20px;
   text-align: center;
   height: 365px;
@@ -83,15 +82,12 @@
   border-style: solid;
 }
 
-
-
 @media screen and (max-width: 600px) {
   .row {
     flex-direction: column;
   }
 }
 */
-
 /* dark theme css for 4 boxes*/
 
 #container {
