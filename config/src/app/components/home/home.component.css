@@ -1,5 +1,8 @@
 .hero {
-  padding-bottom: 9%;
+  padding-bottom: 11%;
+}
+.hero-body {
+  padding-top: 12%;
 }
 
 .lower-row {
