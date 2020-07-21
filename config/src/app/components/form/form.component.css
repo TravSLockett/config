@@ -23,3 +23,9 @@
 .col {
   margin: auto;
 }
+.message {
+  background-color: transparent;
+  opacity: 85%;
+  color: aliceblue;
+  font-size: 25px;
+}

@@ -8,6 +8,7 @@ body {
   margin: 0;
 }
 */
+/*
 .body-first-inner-element {
   background-image: url("./assets/keyboard.jpg") !important;
   background-size: cover;
@@ -18,15 +19,14 @@ body {
   background-size: cover;
   background-position: center center;
 }
-
+*/
 /*light theme*/
-/*
+
 html,
 body {
   height: 100%;
-  background-image: url("./assets/whiteThemeBackGround.jpg") !important;
+  background-image: url("./assets/keyboard.jpg") !important;
   background-size: cover;
   background-position: center center;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
-*/

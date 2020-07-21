@@ -14,6 +14,11 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {}
 
   model = new form(null, '', '');
+  Jenkins = false;
+  Github = false;
+  Docker = false;
+  Kubernetes = false;
+  Dinghy = true;
 
   submitted = false;
   onSubmit() {
@@ -21,14 +26,14 @@ export class FormComponent implements OnInit {
   }
   services = ['Github', 'Splunk', 'Jenkins', 'Kubernetes'];
   enable() {
-    this.model = new form(10, '', '');
+    this.model = new form('10', '', '');
   }
   enableIt() {
     this._apiService.enable(
       this.which,
-      this.model.id,
-      this.model.name,
-      this.model.configuration
+      this.model.hostname,
+      this.model.username,
+      this.model.password
     );
   }
 }

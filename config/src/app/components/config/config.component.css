@@ -3,7 +3,7 @@
   height: 93vh;
 }
 .hero-body {
-  padding-top: 12%;
+  padding-top: 8%;
 }
 .form-box {
   margin-left: 20%;
@@ -11,10 +11,13 @@
   margin-top: 0%;
 }
 .box1 {
+  align-items: center center;
+  /*
   margin-bottom: 0%;
   margin-left: 5%;
   margin-right: 5%;
   width: 90vw;
+  */
 }
 .btn {
   align-self: center;

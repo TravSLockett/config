@@ -1,21 +1,19 @@
 <div class="container">
   <div [hidden]="submitted">
     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
-      <div class="form-group">
-        <label for="id" style="color: aliceblue;">Master Host Name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="id"
-          required
-          [(ngModel)]="model.id"
-          name="id"
-          placeholder="Please enter "
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="name" style="color: aliceblue;">Service Acccount</label>
+      <div *ngIf="Jenkins || Docker || Kubernetes || Dinghy" class="form-group">
+        <label *ngIf="Jenkins" for="hostname" style="color: aliceblue;"
+          >Enter a name for your Jenkins Master</label
+        >
+        <label *ngIf="Docker" for="hostname" style="color: aliceblue;"
+          >Enter a name for your Docker Configuration</label
+        >
+        <label *ngIf="Kubernetes" for="hostname" style="color: aliceblue;"
+          >Enter a name for this Kubernetes deployment acct</label
+        >
+        <label *ngIf="Dinghy" for="hostname" style="color: aliceblue;"
+          >Enter a name for your Dinghy Configuration</label
+        >
         <input
           type="text"
           class="form-control"
@@ -23,19 +21,99 @@
           required
           [(ngModel)]="model.name"
           name="name"
-          placeholder="Please enter "
+          placeholder="Please enter the name"
         />
       </div>
-      <div class="form-group">
-        <label for="config" style="color: aliceblue;">API Token</label>
+      <div *ngIf="Dinghy" class="form-group">
+        <label for="org" style="color: aliceblue;"
+          >Enter the Github Organization</label
+        >
         <input
           type="text"
           class="form-control"
-          id="config"
+          id="org"
           required
-          [(ngModel)]="model.configuration"
-          name="config"
-          placeholder="Please enter "
+          [(ngModel)]="model.org"
+          name="org"
+          placeholder="Please enter the name"
+        />
+      </div>
+
+      <div *ngIf="Jenkins || Docker" class="form-group">
+        <label for="hostname" style="color: aliceblue;"
+          >Enter the {{ which }} Hostname</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="hostname"
+          required
+          [(ngModel)]="model.hostname"
+          name="hostname"
+          placeholder="Please enter the master host name"
+        />
+      </div>
+
+      <div *ngIf="Jenkins || Github || Docker" class="form-group">
+        <label for="username" style="color: aliceblue;"
+          >Enter the {{ which }} Username</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          required
+          [(ngModel)]="model.username"
+          name="username"
+          placeholder="Please enter the username"
+        />
+      </div>
+      <div *ngIf="Jenkins || Github || Docker || Dinghy" class="form-group">
+        <label
+          *ngIf="Jenkins || Github || Dinghy"
+          for="password"
+          style="color: aliceblue;"
+          >Enter {{ which }} Authentication Token</label
+        >
+        <label *ngIf="Docker" for="password" style="color: aliceblue;"
+          >Enter Docker Password</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="password"
+          required
+          [(ngModel)]="model.password"
+          name="password"
+          placeholder="Please enter the password"
+        />
+      </div>
+      <div *ngIf="Docker || Dinghy" class="form-group">
+        <label *ngIf="Docker || Dinghy" for="password" style="color: aliceblue;"
+          >Enter {{ which }} Repository (format org/repo)</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="password"
+          required
+          [(ngModel)]="model.password"
+          name="password"
+          placeholder="Please enter the password"
+        />
+      </div>
+      <div *ngIf="Kubernetes" class="form-group">
+        <label for="hostname" style="color: aliceblue;"
+          >Enter Kubernetes Service Account Contents</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="model.name"
+          name="name"
+          placeholder="Please enter the name"
         />
       </div>
       <div class="two-buttons">
@@ -60,18 +138,7 @@
 
   <div [hidden]="!submitted" class="report">
     <div class="report-box">
-      <div class="col col-xs-3">
-        <div class="row sub">Configured Master:</div>
-        <div class="col-xs-3 sub">{{ model.id }}</div>
-      </div>
-      <div class="col col-xs-3">
-        <div class="row sub">Last Communication:</div>
-        <div class="col-xs-3 sub">{{ model.name }}</div>
-      </div>
-      <div class="col col-xs-3">
-        <div class="row sub">Last Failue:</div>
-        <div class="col-xs-3 sub">{{ model.configuration }}</div>
-      </div>
+      <p class="message">You have successfully configured {{ which }}</p>
     </div>
   </div>
 </div>

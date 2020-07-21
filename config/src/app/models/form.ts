@@ -1,7 +1,11 @@
 export class form {
   constructor(
-    public id: number,
-    public name: string,
-    public configuration: string
+    public name?: string,
+    public hostname?: string,
+    public username?: string,
+    public password?: string,
+    public repo?: string,
+    public content?: string,
+    public org?: string
   ) {}
 }
