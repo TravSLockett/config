@@ -9,7 +9,8 @@ spec:
         jenkins:
           enabled: true
           masters:
-            - name: my-master
-address:
-username:
-password:
+            name: jenkins name
+            address: https://jenkins hostname
+            username: jenkins username
+            password: jenkins password
+

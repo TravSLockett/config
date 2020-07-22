@@ -11,14 +11,26 @@ export class FormComponent implements OnInit {
   @Input() which: string;
   constructor(private _apiService: ApiServiceService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.which === 'Jenkins') {
+      this.Jenkins = true;
+    } else if (this.which === 'Github') {
+      this.Github = true;
+    } else if (this.which === 'Docker') {
+      this.Docker = true;
+    } else if (this.which === 'Kubernetes') {
+      this.Kubernetes = true;
+    } else if (this.which === 'Dinghy') {
+      this.Dinghy = true;
+    }
+  }
 
   model = new form(null, '', '');
   Jenkins = false;
   Github = false;
   Docker = false;
   Kubernetes = false;
-  Dinghy = true;
+  Dinghy = false;
 
   submitted = false;
   onSubmit() {
@@ -31,9 +43,13 @@ export class FormComponent implements OnInit {
   enableIt() {
     this._apiService.enable(
       this.which,
+      this.model.name,
       this.model.hostname,
       this.model.username,
-      this.model.password
+      this.model.password,
+      this.model.repo,
+      this.model.content,
+      this.model.org
     );
   }
 }

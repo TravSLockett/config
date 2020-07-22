@@ -95,25 +95,25 @@
         <input
           type="text"
           class="form-control"
-          id="password"
+          id="repo"
           required
-          [(ngModel)]="model.password"
-          name="password"
-          placeholder="Please enter the password"
+          [(ngModel)]="model.repo"
+          name="repo"
+          placeholder="Please enter the repo"
         />
       </div>
       <div *ngIf="Kubernetes" class="form-group">
-        <label for="hostname" style="color: aliceblue;"
+        <label for="content" style="color: aliceblue;"
           >Enter Kubernetes Service Account Contents</label
         >
         <input
           type="text"
           class="form-control"
-          id="name"
+          id="content"
           required
-          [(ngModel)]="model.name"
-          name="name"
-          placeholder="Please enter the name"
+          [(ngModel)]="model.content"
+          name="content"
+          placeholder="Please enter the content"
         />
       </div>
       <div class="two-buttons">

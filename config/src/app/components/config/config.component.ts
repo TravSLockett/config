@@ -31,6 +31,8 @@ export class ConfigComponent implements OnInit {
       return '../../../assets/kubernetesBig.png';
     } else if (this.data === 'Dinghy') {
       return '../../../assets/dinghy-1.png';
+    } else if (this.data === 'Docker') {
+      return '../../../assets/docker.png';
     }
   }
 }

@@ -1,0 +1,34 @@
+#Jenkins Inputs
+jenkins_name: my-jenkins
+jenkins_hostname: jenkins.sales.armory.io
+jenkins_user: chad
+jenkins_token: encrypted:k8s!n:jenkins-token!k:jenkins-token
+
+#Github Inputs:
+git_hub_username: chadtripod
+git_hub_token: encrypted:k8s!n:github-token!k:github-token
+
+#Docker Inputs:
+docker_config_name: my-docker
+docker_hostname: index.docker.io
+docker_username: ctripod 
+docker_password: encrypted:k8s!n:docker-token!k:docker-token
+docker_repo: ctripod/kubia
+
+#Kubernetes:
+Kubernetes Config Name: eks-prod-sa
+Kubernetes kubeconfig filename: eks-prod-sa
+Kubernetes primary account: eks-prod-sa
+Kubernetes file contents: encrypted:k8s!n:eks-prod-sa!k:eks-prod-sa
+
+#Dinghy (Pipelines as Code)
+Dinghy Configuration Name: my-dinghy-account
+Dinghy Org: chadtripod
+Dinghy Repo: dinghy-templates
+Dinghy Token: encrypted:k8s!n:github-token!k:github-token
+
+#Terraform:
+Terraform Configuration Name: my-terraform
+Terraform Github Token: encrypted:k8s!n:github-token!k:github-token
+
+

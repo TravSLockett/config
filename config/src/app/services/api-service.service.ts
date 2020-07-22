@@ -12,12 +12,16 @@ const httpOptions = {
 export class ApiServiceService {
   constructor(private http: HttpClient) {}
 
-  enable(which, address, username, password) {
+  enable(which, name?, hostname?, username?, password?, repo?, content?, org?) {
     var data = {
       which: which,
-      address: address,
+      name: name,
+      hostname: hostname,
       username: username,
       password: password,
+      repo: repo,
+      content: content,
+      org: org,
     };
 
     return this.http

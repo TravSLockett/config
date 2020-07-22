@@ -1,0 +1,13 @@
+apiVersion: spinnaker.armory.io/v1alpha2
+kind: SpinnakerService
+metadata:
+  name: spinnaker
+spec:
+  spinnakerConfig:
+    config:
+      armory:
+        terraform:
+          enabled: true
+          git:
+            enabled: true
+            accessToken: 543254325425432543254

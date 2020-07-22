@@ -1,0 +1,14 @@
+apiVersion: spinnaker.armory.io/v1alpha2
+kind: SpinnakerService
+metadata:
+  name: spinnaker
+spec:
+  spinnakerConfig:
+    config:
+      armory:
+        dinghy:
+          enabled: true                  # Whether or not Dinghy is enabled
+          templateOrg: ${dinghyorg}            # SCM organization or namespace where application and template repositories are located
+          templateRepo: ${dinghyrepo} # SCM repository where module templates are located
+          githubToken: ${dinghytoken}               #  GitHub token. This field supports "encrypted" field references (https://docs.armory.io/spinnaker-install-admin-guides/secrets/)
+          githubEndpoint: https://api.github.com
