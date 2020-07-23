@@ -16,9 +16,11 @@ export class ConfigComponent implements OnInit {
     this.message = 'Configure New ' + this.data + ' Masters';
   }
 
-  goToPage() {
+  goToPage(str) {
     console.log('at home, going to config page');
-    this.router.navigate(['home']);
+    this.router.navigate(['home'], {
+      state: { data: { buttonFinished: str } },
+    });
   }
   whichPic() {
     if (this.data === 'Github') {

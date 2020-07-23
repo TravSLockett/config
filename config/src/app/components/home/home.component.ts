@@ -10,14 +10,18 @@ import { ResponsiveService } from '../../services/responsive.service';
 export class HomeComponent implements OnInit {
   public isMobile: Boolean;
   git = false;
+  dataFromConfig: any;
+  kubernetes = true;
+
   constructor(
     private router: Router,
     private responsiveService: ResponsiveService
   ) {}
 
   ngOnInit() {
-    this.onResize();
-    this.responsiveService.checkWidth();
+    //this.onResize();
+    //this.responsiveService.checkWidth();
+    this.dataFromConfig = history.state.data.buttonFinished;
   }
   onResize() {
     this.responsiveService.getMobileStatus().subscribe((isMobile) => {
@@ -30,5 +34,21 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['config'], {
       state: { data: { buttonpressed: str } },
     });
+  }
+
+  whichPic() {
+    if (this.kubernetes === false) {
+      return '../../../assets/kunerbatesTrans.png';
+    } else {
+      return '../../../assets/kubernetesCheckmark.png';
+    }
+  }
+
+  kuberneteCheck() {
+    if (this.kubernetes == false) {
+      return '../../../assets/kunerbatesTrans.png';
+    } else {
+      return '../../../assets/kubernetesCheckmark.png';
+    }
   }
 }
