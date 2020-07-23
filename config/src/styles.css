@@ -10,23 +10,21 @@ body {
 */
 /*
 .body-first-inner-element {
-  background-image: url("./assets/keyboard.jpg") !important;
+  background-image: url("./assets/nightsky1.jpg") !important;
   background-size: cover;
   background-position: center center;
 }
 .body-second-inner-element {
-  background-image: url("./assets/laptop.jpg") !important;
+  background-image: url("./assets/nightsky2.jpg") !important;
   background-size: cover;
   background-position: center center;
 }
 */
-/*light theme*/
 
 html,
 body {
   height: 100%;
-  background-image: url("./assets/keyboard.jpg") !important;
+  background-image: url("./assets/moon2x.png") !important;
   background-size: cover;
   background-position: center center;
-  /*overflow: hidden;*/
 }

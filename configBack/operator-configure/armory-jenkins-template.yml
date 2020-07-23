@@ -9,7 +9,7 @@ spec:
         jenkins:
           enabled: true
           masters:
-            name: ${jenkinsname}
+            - name: ${jenkinsname}
             address: https://${jenkinshostname}/ # The address your jenkins master is reachable at.
             username: ${jenkinsusername} # The username of the jenkins user to authenticate as.
             password: ${jenkinspassword}

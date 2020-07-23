@@ -3,7 +3,7 @@ kind: SpinnakerService
 metadata:
   name: spinnaker
 spec:
-  spinnakerConfig:  
+  spinnakerConfig:
     config:
       features:
         artifacts: true
@@ -11,5 +11,6 @@ spec:
         github:
           enabled: true
           accounts:
-          - name: chadtripod
-            token: 543256432543253252352
+            name: abc
+            token: abc
+

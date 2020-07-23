@@ -1,11 +1,11 @@
 resources:
-- base.yml
+  - base.yml
 # - service-account.yml
 
 namespace: spinnaker
 
 patchesStrategicMerge:
-- initial-config.yml
+  - initial-config.yml
 #- patch-jenkins.yml
 #- patch-github.yml
 #- patch-kubernetes-acct.yml
@@ -15,3 +15,4 @@ patchesStrategicMerge:
 #- patch-dinghy.yml
 #- patch-terraform.yml
 #- patch-policy-engine.yml
+
