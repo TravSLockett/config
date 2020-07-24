@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { form } from '../../models/form';
 import { ApiServiceService } from '../../services/api-service.service';
 
@@ -9,6 +9,7 @@ import { ApiServiceService } from '../../services/api-service.service';
 })
 export class FormComponent implements OnInit {
   @Input() which: string;
+  @Output() whosDone: EventEmitter<any> = new EventEmitter<any>();
   constructor(private _apiService: ApiServiceService) {}
 
   ngOnInit(): void {
@@ -51,5 +52,8 @@ export class FormComponent implements OnInit {
       this.model.content,
       this.model.org
     );
+    console.log('sending' + this.which);
+    this.whosDone.emit(this.which);
+    this._apiService.addToEnabled(this.which);
   }
 }

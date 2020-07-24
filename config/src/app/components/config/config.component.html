@@ -9,10 +9,10 @@
 
     <div class="box1">
       <div class="form-box">
-        <button class="btn btn-md btn-secondary" (click)="goToPage(data)">
+        <button class="btn btn-md btn-secondary" (click)="goToPage()">
           Home
         </button>
-        <app-form [which]="data"></app-form>
+        <app-form [which]="data" (whosDone)="enabled($event)"></app-form>
       </div>
     </div>
   </div>

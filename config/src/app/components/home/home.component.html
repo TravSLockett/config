@@ -23,11 +23,23 @@
       class="click btn btn-secondary mt-0 mb-0"
       src="../../../assets/kunerbatesTrans.png"
       (click)="goToPage('Kubernetes')"
-    /><img
+    />
+
+    <img
+      src="../../../assets/docker.png"
       class="click btn btn-secondary mt-0 mb-0"
-      src="../../../assets/do.png"
+      [style.display]="dockerDone ? 'none' : 'inline'"
       (click)="goToPage('Docker')"
     />
+
+    <img
+      [src]="dockerCheck"
+      class="click btn btn-secondary mt-0 mb-0"
+      style="display: none;"
+      [style.display]="dockerDone ? 'inline' : 'none'"
+      (click)="goToPage('Docker')"
+    />
+
     <img
       class="click btn btn-secondary mt-0 mb-0"
       src="../../../assets/oracleWhite.png"
@@ -39,9 +51,19 @@
     <p style="color: white; font-size: 22px;">
       Repository and Artifacts for Deploy
     </p>
+
     <img
-      class="click btn btn-secondary mt-0 mb-0"
       src="../../../assets/githubWhite.png"
+      class="click btn btn-secondary mt-0 mb-0"
+      [style.display]="githubDone ? 'none' : 'inline'"
+      (click)="goToPage('Github')"
+    />
+
+    <img
+      [src]="githubCheck"
+      class="click btn btn-secondary mt-0 mb-0"
+      style="display: none;"
+      [style.display]="githubDone ? 'inline' : 'none'"
       (click)="goToPage('Github')"
     />
 
@@ -68,11 +90,22 @@
 
   <div class="column4">
     <p style="color: white; font-size: 22px;">Continous Integration</p>
+
     <img
+      src="../../../assets/jenkinsNoWord.png"
       class="click btn btn-secondary mt-0 mb-0"
-      src="../../../assets/jenkinsCheckmark.png"
+      [style.display]="jenkinsDone ? 'none' : 'inline'"
       (click)="goToPage('Jenkins')"
     />
+
+    <img
+      [src]="jenkinsCheck"
+      class="click btn btn-secondary mt-0 mb-0"
+      style="display: none;"
+      [style.display]="jenkinsDone ? 'inline' : 'none'"
+      (click)="goToPage('Jenkins')"
+    />
+
     <img
       class="click btn btn-secondary mt-0 mb-0"
       src="../../../assets/travisci.png"

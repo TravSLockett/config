@@ -10,17 +10,22 @@ export class ConfigComponent implements OnInit {
   constructor(private router: Router) {}
   data: any;
   message: string;
+  checkWho: string;
 
   ngOnInit(): void {
     this.data = history.state.data.buttonpressed;
     this.message = 'Configure New ' + this.data + ' Masters';
   }
 
-  goToPage(str) {
+  goToPage() {
     console.log('at home, going to config page');
     this.router.navigate(['home'], {
-      state: { data: { buttonFinished: str } },
+      state: { data: { buttonFinished: this.checkWho } },
     });
+  }
+  public enabled(done: any): void {
+    console.log('trying to set the value of this thing');
+    this.checkWho = done;
   }
   whichPic() {
     if (this.data === 'Github') {
