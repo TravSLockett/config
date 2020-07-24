@@ -32,21 +32,4 @@ export class ApiServiceService {
       )
       .toPromise();
   }
-
-  addToEnabled(which) {
-    var data = {
-      which: which,
-    };
-    return this.http
-      .post(
-        'http://localhost:3000/users/add',
-        JSON.stringify(data),
-        httpOptions
-      )
-      .toPromise();
-  }
-
-  getEnabledList() {
-    return this.http.get('http://localhost:3000/users/get');
-  }
 }

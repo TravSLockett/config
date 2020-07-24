@@ -9,7 +9,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
-
+import { SharedVService } from './services/shared-v.service';
 import { LayoutModule } from './module/layout/layout.module';
 
 import { HomeComponent } from './components/home/home.component';
@@ -28,7 +28,7 @@ import { FormComponent } from './components/form/form.component';
     FlexLayoutModule,
     LayoutModule,
   ],
-  providers: [ApiServiceService],
+  providers: [ApiServiceService, SharedVService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

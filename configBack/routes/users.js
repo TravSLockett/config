@@ -211,15 +211,4 @@ router.post("/enable", function (req, res, next) {
   res.send("success!");
 });
 
-var enabledList = [];
-router.post("/add", function (req, res, next) {
-  enabledList.push(req.body.which);
-  console.log(enabledList);
-});
-
-router.get("/get", function (req, res, next) {
-  console.log(enabledList);
-  res.send(enabledList);
-});
-
 module.exports = router;

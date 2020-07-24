@@ -11,6 +11,6 @@ spec:
         github:
           enabled: true
           accounts:
-            name: a
-            token: a
+            name: aaa
+            token: bbb
 

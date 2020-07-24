@@ -54,6 +54,5 @@ export class FormComponent implements OnInit {
     );
     console.log('sending' + this.which);
     this.whosDone.emit(this.which);
-    this._apiService.addToEnabled(this.which);
   }
 }

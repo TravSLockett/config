@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ResponsiveService } from '../../services/responsive.service';
-import { ApiServiceService } from '../../services/api-service.service';
+
+import { SharedVService } from '../../services/shared-v.service';
 
 @Component({
   selector: 'app-home',
@@ -23,41 +24,28 @@ export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private responsiveService: ResponsiveService, //private kubernetes: Boolean
-    private _apiService: ApiServiceService
+
+    private shared: SharedVService
   ) {}
 
-  async ngOnInit() {
+  ngOnInit() {
     //this.onResize();
     //this.responsiveService.checkWidth();
+
     this.dataFromConfig = history.state.data.buttonFinished;
     console.log('dataFromConfig is currently ' + this.dataFromConfig);
-    let list = await this._apiService.getEnabledList();
-
-    this.returnedList = list;
-    console.log(list);
-    this.returnedList.forEach(function (item) {
-      if (item == 'Jenkins') {
-        console.log(item);
-        this.jenkinsDone = true;
-      } else if (item == 'Github') {
-        console.log(item);
-        this.githubDone = true;
-      } else if (item == 'Docker') {
-        console.log(item);
-        this.dockerDone = true;
-      }
-    });
-    /*
     if (this.dataFromConfig === 'Jenkins') {
-      this._apiService.addToEnabled(this.dataFromConfig)
-      this.jenkinsDone = true;
+      this.shared.setJenkins(true);
     } else if (this.dataFromConfig === 'Github') {
-      this.githubDone = true;
+      this.shared.setGithub(true);
     } else if (this.dataFromConfig === 'Docker') {
-      this.dockerDone = true;
+      this.shared.setDocker(true);
     }
-    */
+    this.jenkinsDone = this.shared.getJenkins();
+    this.githubDone = this.shared.getGithub();
+    this.dockerDone = this.shared.getDocker();
   }
+
   onResize() {
     this.responsiveService.getMobileStatus().subscribe((isMobile) => {
       this.isMobile = isMobile;

@@ -9,8 +9,8 @@ spec:
         jenkins:
           enabled: true
           masters:
-            - name: 1
-            address: https://1
-            username: 1
-            password: 1
+            - name: 111
+            address: https://222
+            username: 333
+            password: 444
 
